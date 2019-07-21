@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+
+// Color variables
+$white: #fff;
+$darkBlue: #3a4793;
+$lightBlue: #25b3ce;
+$lightPurple: #9787ee;
+$yellow: #ffbf3e;
+
+// Settings
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  font-family: 'roboto', sans-serif;
+  box-sizing: border-box;
+  color: white;
+
+}
+
+// Webpage Dimensions
+html,
+body {
+  height: 100%;
+}
+
+// background image
+#all-task {
+  background: url("https://www.vizts.com/wp-content/uploads/2016/03/K2-the-highest-landmark-of-Pakistan-1170x778.jpg") center center;
+  background-repeat: no-repeat;
+  // height: 300px;
+  width: 100%;
+  background-size: cover;
+
+  // Header details
+  .header {
+    background: rgba(58, 71, 147, .65);
+    padding: 50px 15px;
+    text-align: right;
+
+    .logo {
+      float: left;
+      font-family: 'Megrim', cursive;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    .task-total {
+      position: relative;
+      top: -20px;
+
+      .task {
+        display: inline-block;
+
+        .number {
+          font-size: 60px;
+          font-weight: 100;
+          margin: 0 10px;
+          position: relative;
+          top: 15px;
+          color: $lightPurple;
+          text-align: center;
+
+        }
+      }
+    }
+
+    // circle background
+    .add-circle {
+      background: $white;
+      border-radius: 50%;
+      position: absolute;
+      right: 25px;
+      top: 120px;
+      padding: 10px 12px;
+
+      // plus image
+      .fa {
+        color: $lightBlue;
+        font-size: 60px;
+      }
+    }
+  }
+
+}
+
+// Welcome button
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 15px 0;
+
+  &.lightBlue {
+    background-color: $lightBlue;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+#home {
+  background: url("https://www.vizts.com/wp-content/uploads/2016/03/K2-the-highest-landmark-of-Pakistan-1170x778.jpg") center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .welcome-box {
+    background: rgba(0, 0, 0, .7);
+    padding: 40px 15px;
+
+    h1 {
+      font-family: 'roboto', sans-serif;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 100;
+    }
+
+  }
+
+}
