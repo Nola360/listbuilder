@@ -11,9 +11,7 @@ $lightPurple: #9787ee;
 $yellow: #ffbf3e;
 
 // Settings
-*,
-h1,
-h2,
+* h2,
 h3,
 h4,
 h5,
@@ -23,7 +21,7 @@ span,
 div {
   font-family: 'roboto', sans-serif;
   box-sizing: border-box;
-  color: white;
+  // color: white;
 
 }
 
@@ -31,80 +29,8 @@ div {
 html,
 body {
   height: 100%;
-}
-
-// background image
-#all-task {
-  background: url("https://www.vizts.com/wp-content/uploads/2016/03/K2-the-highest-landmark-of-Pakistan-1170x778.jpg") center center;
-  background-repeat: no-repeat;
-  // height: 300px;
-  width: 100%;
-  background-size: cover;
-
-  // Header details
-  .header {
-    background: rgba(58, 71, 147, .65);
-    padding: 50px 15px;
-    text-align: right;
-
-    .logo {
-      float: left;
-      font-family: 'Megrim', cursive;
-      font-size: 36px;
-      text-transform: uppercase;
-    }
-
-    .task-total {
-      position: relative;
-      top: -20px;
-
-      .task {
-        display: inline-block;
-
-        .number {
-          font-size: 60px;
-          font-weight: 100;
-          margin: 0 10px;
-          position: relative;
-          top: 15px;
-          color: $lightPurple;
-          text-align: center;
-
-        }
-      }
-    }
-
-    // circle background
-    .add-circle {
-      background: $white;
-      border-radius: 50%;
-      position: absolute;
-      right: 25px;
-      top: 120px;
-      padding: 10px 12px;
-
-      // plus image
-      .fa {
-        color: $lightBlue;
-        font-size: 60px;
-      }
-    }
-  }
-
-}
-
-// Welcome button
-.btn {
-  width: 100%;
-  padding: 10px 20px;
-  text-align: center;
-  margin: 15px 0;
-
-  &.lightBlue {
-    background-color: $lightBlue;
-    font-size: 25px;
-    cursor: pointer;
-  }
+  background-color: #ededed;
+  overflow: hidden;
 }
 
 #home {
@@ -126,6 +52,229 @@ body {
       text-transform: uppercase;
       font-size: 28px;
       font-weight: 100;
+      color: white;
     }
+
+  }
+
+}
+
+// background image
+#all-task {
+
+  // height: 100%;
+  // overflow: auto;
+
+  .header {
+    background: url("https://www.vizts.com/wp-content/uploads/2016/03/K2-the-highest-landmark-of-Pakistan-1170x778.jpg") center center;
+    background-repeat: no-repeat;
+    // height: 300px;
+    width: 100%;
+    background-size: cover;
+    color: white;
+
+    .top {
+      background: rgba(58, 71, 147, .65);
+      padding: 50px 15px;
+      text-align: right;
+
+      .logo {
+        float: left;
+        font-family: 'Megrim', cursive;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+
+      .task-total {
+        position: relative;
+        top: -20px;
+
+        .task {
+          display: inline-block;
+
+          .number {
+            font-size: 60px;
+            font-weight: 100;
+            margin: 0 10px;
+            position: relative;
+            top: 15px;
+            color: $lightPurple;
+            text-align: center;
+
+          }
+        }
+      }
+    }
+
+    // circle background
+    .add-circle {
+      background: $white;
+      border-radius: 50%;
+      position: absolute;
+      right: 25px;
+      top: 120px;
+      padding: 10px 12px;
+
+      // plus image
+      .fa {
+        color: $lightBlue;
+        font-size: 60px;
+      }
+    }
+  }
+
+  .content-area {
+    // color: red;
+    width: 100%;
+
+    .task-container {
+      margin: 40px 0;
+
+      .task-box {
+        padding: 20px;
+        border-bottom: 2px solid #d1d1d1;
+        background-color: white;
+        margin: 0 0 20px 0;
+        position: relative;
+
+        .title {
+          color: black;
+          margin: 0 0 5px 0;
+          font-size: 24px;
+        }
+
+        .date {
+          color: #ababab;
+          font-size: 14px;
+        }
+
+        .check-box {
+          padding: 2px;
+          border: 3px solid $darkBlue;
+          border-radius: 10px;
+          display: inline-block;
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 35px;
+          color: $lightBlue;
+        }
+      }
+    }
+  }
+
+  .task-form {
+    background-color: $darkBlue;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: scroll;
+    color: white;
+    padding: 50px 0;
+    // task page transition
+    transform: translate(0, 100%);
+    transition: all .8s ease;
+
+    &.active {
+      transform: translate(0, 0);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 35px;
+      right: 35px;
+      padding: 15px;
+      cursor: pointer;
+
+      .fa {
+        font-size: 36px;
+      }
+    }
+
+    form {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    h3 {
+      margin: 50px 0;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: 'roboto', cursive;
+      text-transform: capitalize;
+      display: block;
+      margin: 0 0 15px 0;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      background-color: rgba(255, 255, 255, .1);
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, .7);
+      font-family: 'roboto', cursive;
+      font-size: 36px;
+      font-weight: 300;
+      color: white;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    button {
+      background-color: $lightBlue;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: white;
+      padding: 15px 20px;
+      // margin: 0 auto;
+
+    }
+  }
+
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+// Welcome button
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 15px 0;
+
+  &.lightBlue {
+    background-color: $lightBlue;
+    font-size: 25px;
+    cursor: pointer;
   }
 }
