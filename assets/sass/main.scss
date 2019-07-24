@@ -264,8 +264,139 @@ body {
   padding: 0 15px;
 }
 
+// Laptops
+@media only screen and (max-width: 1200px) {}
 
-// Welcome button
+// Tablets
+@media only screen and (max-width: 1000px) {}
+
+// Phones
+@media only screen and (min-width: 767px) {
+  #all-task {
+    .header {
+      .add-circle {
+
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        right: 25px;
+        top: 110px;
+        padding: 5px 7px;
+      }
+
+      .top {
+        .task-total {
+          top: 0;
+
+          .task {
+            // Keeps button in its own block when adjusted
+            display: block;
+
+            .number {
+              font-size: 24px;
+              font-weight: 500;
+              margin: 0 10px 0;
+              position: relative;
+              top: 3px;
+              color: #9787ee;
+              text-align: center;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+//Extra Small Phones
+@media only screen and (max-width: 360px) {
+  #all-task {
+    .header {
+      .add-circle {
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        right: 25px;
+        top: 122px;
+        padding: 5px 7px;
+      }
+
+      .top {
+        .logo {
+          text-align: center;
+        }
+
+        .task-total {
+          top: 0;
+
+          .task {
+            // Keeps button in its own block when adjusted
+            display: block;
+
+            .number {
+              font-size: 24px;
+              font-weight: 500;
+              margin: 0 10px 0;
+              position: relative;
+              top: 3px;
+              color: #9787ee;
+              text-align: center;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+// Phones
+@media only screen and (min-width: 500px) {
+  #all-task {
+    .header {
+      .add-circle {
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        right: 25px;
+        top: 110px;
+        padding: 5px 7px;
+      }
+
+      .top {
+        .task-total {
+          top: 0;
+
+          .task {
+            // Keeps button in its own block when adjusted
+            display: block;
+
+            .number {
+              font-size: 24px;
+              font-weight: 500;
+              margin: 0 10px 0;
+              position: relative;
+              top: 3px;
+              color: #9787ee;
+              text-align: center;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+
+// Welcome Page button
 .btn {
   width: 100%;
   padding: 10px 20px;
